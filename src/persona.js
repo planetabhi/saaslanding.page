@@ -5,11 +5,11 @@ export const persona = {
     story:
       "We celebrate exceptional SaaS design here. These tastefully designed sites and apps transcend mere marketing tools or products. They blend dedication, creativity, and precision, elevating digital experiences. Discover thoughtful typography, layouts, spacing, and cool ideas that showcase design's power.",
   sections: {
-    books: [
+    sites: [
         {
-          title: "anygood.app",
-          desc: 'List-making app.',
-          url: 'https://www.anygood.app/?ref=saaslanding.page'
+          title: "antimetal.com",
+          desc: 'Automate infrastructure.',
+          url: 'https://antimetal.com/?ref=saaslanding.page'
         },
         {
           title: "daylightcomputer.com",

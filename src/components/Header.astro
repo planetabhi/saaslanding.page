@@ -8,7 +8,27 @@ const { title, description } = Astro.props
 ---
 
 <header>
-    <h1 class="text-base text-l/primary dark:text-d/primary">{title}</h1>
-    <p class="text-sm text-l/tertiary dark:text-d/tertiary">{description}</p>
-  
+    <h1 class="title">{title}</h1>
+    <p class="description">{description}</p>
 </header>
+
+<style>
+    .title {
+        font-size: 1rem;
+        color: var(--text-primary-light);
+    }
+
+    .description {
+        font-size: 0.875rem;
+        color: var(--text-tertiary-light);
+    }
+
+    @media (prefers-color-scheme: dark) {
+        .title {
+            color: var(--text-primary-dark);
+        }
+        .description {
+            color: var(--text-tertiary-dark);
+        }
+    }
+</style>

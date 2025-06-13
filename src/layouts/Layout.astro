@@ -5,8 +5,8 @@ interface Props {
 }
 
 const { title, desc } = Astro.props;
-import Navigation from "../components/Navigation.astro";
 import Footer from "../components/Footer.astro";
+import '../styles/global.scss';
 ---
 
 <!doctype html>
@@ -30,12 +30,9 @@ import Footer from "../components/Footer.astro";
     <meta property="twitter:description" content={desc} />
     <title>{title}</title>
   </head>
-  <body class="bg-l/bg dark:bg-d/bg antialiased w-full h-full p-4 md:p-0">
-    <div
-      class="w-full m-auto max-w-xl min-h-screen flex flex-col justify-center items-start gap-8"
-    >
-       <!-- <Navigation /> -->
-      <main class="space-y-4">
+  <body>
+    <div class="container">
+      <main>
         <slot />
       </main>
       <Footer />

@@ -1,0 +1,87 @@
+@use '@new-ui/reset' as *;
+
+// Font size variables
+$font-size-base: 13px;
+$font-size-small: 11px;
+
+body {
+    line-height: 1.6;
+    font-size: $font-size-base;
+}
+
+// Force 13px on all headings
+h1, h2, h3, h4, h5, h6 {
+    font-size: $font-size-base;
+}
+
+.container {
+    margin: {
+        top: 60px;
+        bottom: 40px;
+        left: 80px;
+        right: auto;
+    }
+    max-width: 700px;
+}
+
+p {
+    max-width: 700px;
+    font-size: $font-size-base;
+}
+
+h3 {
+    padding: 0;
+    margin-top: 0;
+}
+
+a {
+    color: blue;
+    text-decoration: none;
+    font-size: $font-size-base;
+
+    &:hover {
+        color: rgb(55, 0, 92);
+        text-decoration: underline;
+    }
+}
+
+ul {
+    margin-top: 0;
+    line-height: 1.6;
+    max-width: 650px;
+    font-size: $font-size-base;
+}
+
+.header {
+    position: relative;
+    margin-bottom: -20px;
+}
+
+.subtitle {
+    font-size: $font-size-small;
+    margin-top: 0;
+}
+
+.header-icon {
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    left: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        margin: {
+            top: 20px;
+            bottom: 20px;
+            left: 32px;
+            right: 16px;
+        }
+    }
+
+    .header-icon {
+        left: -40px;
+    }
+}
