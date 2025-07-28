@@ -10,11 +10,11 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/netlify": "^6.3.4",
-    "astro": "^5.9.2",
+    "@astrojs/netlify": "^6.5.3",
+    "astro": "^5.12.4",
     "astro-compress": "^2.3.8",
     "astro-robots-txt": "^1.0.0",
-    "sass-embedded": "^1.72.0"
+    "sass-embedded": "^1.89.2"
   },
   "devDependencies": {
     "@new-ui/foundations": "^0.2.5",
