@@ -12,6 +12,11 @@ export const persona = {
           url: 'https://antimetal.com/?ref=saaslanding.page'
         },
         {
+          title: "attio.com",
+          desc: 'CRM for sales.',
+          url: 'https://attio.com/?ref=saaslanding.page'
+        },
+        {
           title: "augusthealth.com",
           desc: 'EHR platform.',
           url: 'https://www.augusthealth.com/?ref=saaslanding.page'
