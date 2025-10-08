@@ -4,9 +4,18 @@
 $font-size-base: 13px;
 $font-size-small: 11px;
 
+@font-face {
+    font-family: 'Mono';
+    src: url('/mono.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
 body {
     line-height: 1.6;
     font-size: $font-size-base;
+    font-family: 'Mono', monospace;
 }
 
 // Force 13px on all headings

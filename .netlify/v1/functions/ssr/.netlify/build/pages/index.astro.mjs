@@ -1,13 +1,12 @@
-import { c as createComponent, d as createAstro, m as maybeRenderHead, f as addAttribute, r as renderTemplate, i as renderComponent, j as renderHead, k as renderSlot, l as Fragment } from '../chunks/astro/server_DGri-rw2.mjs';
+import { c as createComponent, d as createAstro, m as maybeRenderHead, f as addAttribute, r as renderTemplate, i as renderComponent, j as renderHead, k as renderSlot, l as Fragment } from '../chunks/astro/server_BnGtXBMS.mjs';
 /* empty css                                 */
 export { renderers } from '../renderers.mjs';
 
 const persona = {
-    firstName: "SaaS",
-    secondName: "Landing",
-    description: "Celebrating the craft and care of SaaS design",
-    story:
-      "We celebrate exceptional SaaS design here. These tastefully designed sites and apps transcend mere marketing tools or products. They blend dedication, creativity, and precision, elevating digital experiences. Discover thoughtful typography, layouts, spacing, and cool ideas that showcase design's power.",
+    firstName: "",
+    secondName: "",
+    description: "",
+    story:"",
   sections: {
     sites: [
         {
@@ -24,6 +23,11 @@ const persona = {
           title: "augusthealth.com",
           desc: 'EHR platform.',
           url: 'https://www.augusthealth.com/?ref=saaslanding.page'
+        },
+        {
+          title: "cursor.com",
+          desc: 'Code with AI.',
+          url: 'https://cursor.com/?ref=saaslanding.page'
         },
         {
           title: "daylightcomputer.com",
@@ -76,8 +80,8 @@ const persona = {
   },
       contacts: [
       {
-        title: "Curated by @planetabhi.",
-        url: 'https://planetabhi.com/'
+        title: "",
+        url: ''
       },
     ],
 
