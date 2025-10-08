@@ -1,9 +1,8 @@
 export const persona = {
-    firstName: "SaaS",
-    secondName: "Landing",
-    description: "Celebrating the craft and care of SaaS design",
-    story:
-      "We celebrate exceptional SaaS design here. These tastefully designed sites and apps transcend mere marketing tools or products. They blend dedication, creativity, and precision, elevating digital experiences. Discover thoughtful typography, layouts, spacing, and cool ideas that showcase design's power.",
+    firstName: "",
+    secondName: "",
+    description: "",
+    story:"",
   sections: {
     sites: [
         {
@@ -77,8 +76,8 @@ export const persona = {
   },
       contacts: [
       {
-        title: "Curated by @planetabhi.",
-        url: 'https://planetabhi.com/'
+        title: "",
+        url: ''
       },
     ],
 

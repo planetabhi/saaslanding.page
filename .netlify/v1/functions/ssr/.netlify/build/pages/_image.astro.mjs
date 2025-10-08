@@ -1,8 +1,16 @@
-import { t as toStyleString, A as AstroError, N as NoImageMetadata, F as FailedToFetchRemoteImageDimensions, E as ExpectedImageOptions, a as ExpectedImage, b as ExpectedNotESMImage, I as InvalidImageService, c as createComponent, d as createAstro, e as ImageMissingAlt, m as maybeRenderHead, f as addAttribute, s as spreadAttributes, r as renderTemplate, g as ExperimentalFontsNotEnabled, h as FontFamilyNotFound, u as unescapeHTML } from '../chunks/astro/server_DGri-rw2.mjs';
+import { t as toStyleString, A as AstroError, N as NoImageMetadata, F as FailedToFetchRemoteImageDimensions, E as ExpectedImageOptions, a as ExpectedImage, b as ExpectedNotESMImage, I as InvalidImageService, c as createComponent, d as createAstro, e as ImageMissingAlt, m as maybeRenderHead, f as addAttribute, s as spreadAttributes, r as renderTemplate, g as ExperimentalFontsNotEnabled, h as FontFamilyNotFound, u as unescapeHTML } from '../chunks/astro/server_BnGtXBMS.mjs';
 export { renderers } from '../renderers.mjs';
 
+const URL_PROTOCOL_REGEX = /^(?:(?:http|ftp|https|ws):?\/\/|\/\/)/;
 function isRemotePath(src) {
-  return /^(?:http|ftp|https|ws):?\/\//.test(src) || src.startsWith("data:");
+  const decoded = src.replace(/%5C/gi, "\\");
+  if (decoded[0] === "\\") {
+    return true;
+  }
+  if (/^(?:http|https|ftp|ws):\\/.test(decoded)) {
+    return true;
+  }
+  return URL_PROTOCOL_REGEX.test(decoded) || decoded.startsWith("data:");
 }
 
 const DEFAULT_HASH_PROPS = [
@@ -1199,7 +1207,7 @@ const $$Image = createComponent(async ($$result, $$props, $$slots) => {
   }
   const { class: className, ...attributes } = { ...additionalAttributes, ...image.attributes };
   return renderTemplate`${maybeRenderHead()}<img${addAttribute(image.src, "src")}${spreadAttributes(attributes)}${addAttribute(className, "class")}>`;
-}, "/Users/abhi/Documents/Experiments/saaslanding.page/node_modules/.pnpm/astro@5.12.4_@netlify+blobs@10.0.7_@types+node@22.13.14_jiti@2.5.1_lightningcss@1.29.3__270f411a0dfdb1c1443c5102802de348/node_modules/astro/components/Image.astro", void 0);
+}, "/Users/abhi/Documents/Experiments/saaslanding.page/node_modules/.pnpm/astro@5.14.1_@netlify+blobs@10.0.11_@types+node@22.13.14_jiti@2.5.1_lightningcss@1.29.3_4d165b993feb6e01c91cd552b514e8e8/node_modules/astro/components/Image.astro", void 0);
 
 const mimes = {
   "3g2": "video/3gpp2",
@@ -1717,9 +1725,9 @@ const $$Picture = createComponent(async ($$result, $$props, $$slots) => {
     const srcsetAttribute = props.densities || !props.densities && !props.widths && !useResponsive ? `${image.src}${image.srcSet.values.length > 0 ? ", " + image.srcSet.attribute : ""}` : image.srcSet.attribute;
     return renderTemplate`<source${addAttribute(srcsetAttribute, "srcset")}${addAttribute(lookup(image.options.format ?? image.src) ?? `image/${image.options.format}`, "type")}${spreadAttributes(sourceAdditionalAttributes)}>`;
   })}  <img${addAttribute(fallbackImage.src, "src")}${spreadAttributes(attributes)}${addAttribute(className, "class")}> </picture>`;
-}, "/Users/abhi/Documents/Experiments/saaslanding.page/node_modules/.pnpm/astro@5.12.4_@netlify+blobs@10.0.7_@types+node@22.13.14_jiti@2.5.1_lightningcss@1.29.3__270f411a0dfdb1c1443c5102802de348/node_modules/astro/components/Picture.astro", void 0);
+}, "/Users/abhi/Documents/Experiments/saaslanding.page/node_modules/.pnpm/astro@5.14.1_@netlify+blobs@10.0.11_@types+node@22.13.14_jiti@2.5.1_lightningcss@1.29.3_4d165b993feb6e01c91cd552b514e8e8/node_modules/astro/components/Picture.astro", void 0);
 
-const mod = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+const fontsMod = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   __proto__: null
 }, Symbol.toStringTag, { value: 'Module' }));
 
@@ -1727,12 +1735,12 @@ const $$Astro = createAstro();
 const $$Font = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro, $$props, $$slots);
   Astro2.self = $$Font;
-  const { fontsData } = mod;
-  if (!fontsData) {
+  const { internalConsumableMap } = fontsMod;
+  if (!internalConsumableMap) {
     throw new AstroError(ExperimentalFontsNotEnabled);
   }
   const { cssVariable, preload = false } = Astro2.props;
-  const data = fontsData.get(cssVariable);
+  const data = internalConsumableMap.get(cssVariable);
   if (!data) {
     throw new AstroError({
       ...FontFamilyNotFound,
@@ -1740,7 +1748,7 @@ const $$Font = createComponent(($$result, $$props, $$slots) => {
     });
   }
   return renderTemplate`${preload && data.preloadData.map(({ url, type }) => renderTemplate`<link rel="preload"${addAttribute(url, "href")} as="font"${addAttribute(`font/${type}`, "type")} crossorigin>`)}<style>${unescapeHTML(data.css)}</style>`;
-}, "/Users/abhi/Documents/Experiments/saaslanding.page/node_modules/.pnpm/astro@5.12.4_@netlify+blobs@10.0.7_@types+node@22.13.14_jiti@2.5.1_lightningcss@1.29.3__270f411a0dfdb1c1443c5102802de348/node_modules/astro/components/Font.astro", void 0);
+}, "/Users/abhi/Documents/Experiments/saaslanding.page/node_modules/.pnpm/astro@5.14.1_@netlify+blobs@10.0.11_@types+node@22.13.14_jiti@2.5.1_lightningcss@1.29.3_4d165b993feb6e01c91cd552b514e8e8/node_modules/astro/components/Font.astro", void 0);
 
 const imageConfig = {"endpoint":{"route":"/_image"},"service":{"entrypoint":"@astrojs/netlify/image-service.js","config":{}},"domains":[],"remotePatterns":[],"responsiveStyles":false};
 							const getImage = async (options) => await getImage$1(options, imageConfig);
@@ -1797,10 +1805,10 @@ const GET = async ({ request }) => {
     }
     let inputBuffer = void 0;
     const isRemoteImage = isRemotePath(transform.src);
-    const sourceUrl = isRemoteImage ? new URL(transform.src) : new URL(transform.src, url.origin);
     if (isRemoteImage && isRemoteAllowed(transform.src, imageConfig) === false) {
       return new Response("Forbidden", { status: 403 });
     }
+    const sourceUrl = new URL(transform.src, url.origin);
     inputBuffer = await loadRemoteImage(sourceUrl, isRemoteImage ? new Headers() : request.headers);
     if (!inputBuffer) {
       return new Response("Not Found", { status: 404 });
