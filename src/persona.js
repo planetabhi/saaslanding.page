@@ -22,6 +22,11 @@ export const persona = {
           url: 'https://www.augusthealth.com/?ref=saaslanding.page'
         },
         {
+          title: "cursor.com",
+          desc: 'Code with AI.',
+          url: 'https://cursor.com/?ref=saaslanding.page'
+        },
+        {
           title: "daylightcomputer.com",
           desc: 'Caring computer.',
           url: 'https://daylightcomputer.com/?ref=saaslanding.page'
